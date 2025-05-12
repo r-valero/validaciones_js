@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario de Registro</title>
+    <style>
+      .error {
+        color: red;
+        font-size: 0.9em;
+      }
+      .success {
+        color: green;
+        font-weight: bold;
+      }
+      input,
+      select,
+      textarea {
+        display: block;
+        margin-bottom: 10px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario de Registro</h1>
+    <form id="registroForm" novalidate>
+      <label
+        >Nombre completo:
+        <input type="text" id="nombre" name="nombre" required />
+        <span class="error" id="error-nombre"></span>
+      </label>
+
+      <label
+        >Correo electrónico:
+        <input type="email" id="email" name="email" required />
+        <span class="error" id="error-email"></span>
+      </label>
+
+      <label
+        >Edad:
+        <input type="number" id="edad" name="edad" required />
+        <span class="error" id="error-edad"></span>
+      </label>
+
+      <label
+        >Número de teléfono:
+        <input type="text" id="telefono" name="telefono" required />
+        <span class="error" id="error-telefono"></span>
+      </label>
+
+      <label
+        >Género:
+        <select id="genero" name="genero" required>
+          <option value="">Seleccione...</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Femenino">Femenino</option>
+          <option value="Otro">Otro</option>
+        </select>
+        <span class="error" id="error-genero"></span>
+      </label>
+
+      <label
+        >Fecha de nacimiento:
+        <input
+          type="date"
+          id="fechaNacimiento"
+          name="fechaNacimiento"
+          required
+        />
+        <span class="error" id="error-fechaNacimiento"></span>
+      </label>
+
+      <label
+        >Comentarios:
+        <textarea
+          id="comentarios"
+          name="comentarios"
+          maxlength="300"
+        ></textarea>
+        <span class="error" id="error-comentarios"></span>
+      </label>
+
+      <button type="submit">Enviar</button>
+      <p id="mensajeExito" class="success"></p>
+    </form>
+
+    <script src="validaciones.js"></script>
+  </body>
+</html>
